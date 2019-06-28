@@ -1,0 +1,13 @@
+<view wx:for="{{movieList}}" wx:key="{{index}}">
+<van-card
+  tag="{{item.rating.average}}"
+  desc="{{item.casts[0].name}}"
+  title="{{item.title}}"
+  thumb="{{ item.images.small }}"
+>
+  <view slot="footer">
+   
+    <van-button size="mini" type="danger">查看详情</van-button>
+  </view>
+</van-card>
+</view>
