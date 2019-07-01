@@ -1,0 +1,27 @@
+<view class='detail'>
+    <image src='{{movie.images.large}}' class='logo' mode='aspectFit'>
+    </image>
+    <view class='descr'>
+      {{movie.summary}}
+    </view>
+    <view>
+      <van-rate value="{{ rate }}" bind:change="onRateChange" />
+      <van-cell-group>
+        <van-field
+          value="{{ comment }}"
+          placeholder="写一些评论吧！"
+          border="{{ true }}"
+          bind:change="onCommentChange"
+        />
+      </van-cell-group>
+    </view>
+
+    <view>
+     <van-button type="warning" bindtap='uploadImage'>上传图片</van-button>
+     <view>
+       <image class='commentImage' src='{{item}}' wx:for="{{imageUrls}}" wx:key="{{index}}"></image>
+     </view>
+     <van-button type="danger" size='large' bindtap='submit'>提交评论</van-button>
+
+    </view>
+</view>

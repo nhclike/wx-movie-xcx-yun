@@ -7,7 +7,7 @@
 >
   <view slot="footer">
    
-    <van-button size="mini" type="danger">查看详情</van-button>
+    <van-button size="mini" type="danger" bindtap="toComment" data-movieid="{{item.id}}">查看详情</van-button>
   </view>
 </van-card>
 </view>
